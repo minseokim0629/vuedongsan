@@ -6,11 +6,11 @@
       <p>50 만원</p>
     </div>
     <div>
-      <h4>{{ products[1] }}}</h4>
+      <h4>{{ products[1] }}</h4>
       <p>가격은 아무거나</p>
     </div>
     <div>
-      <h4>{{ products[2] }}}</h4>
+      <h4>{{ products[2] }}</h4>
       <p>가격은 아무거나</p>
     </div>
   </div>
