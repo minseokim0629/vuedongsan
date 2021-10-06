@@ -1,19 +1,37 @@
 <template>
-  <div id="app">
-    안녕하세요
+  <div>
     <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <div>
+      <h4>{{ products[0] }}</h4>
+      <p>50 만원</p>
+    </div>
+    <div>
+      <h4>{{ products[1] }}}</h4>
+      <p>가격은 아무거나</p>
+    </div>
+    <div>
+      <h4>{{ products[2] }}}</h4>
+      <p>가격은 아무거나</p>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-
 export default {
   name: "App",
-  components: {
-    HelloWorld,
+  // 데이터 보관함
+  data() {
+    //여기에 데이터 보관, 데이터는 object 자료로 저장
+    // {자료이름 : 자료내용}
+    return {
+      price1: 60,
+      price2: 70,
+      //HTML 속성도 데이터 바인딩 가능
+      스타일: "color : blue",
+      products: ["역삼동원룸", "천호동원룸", "마포구원룸"],
+    };
   },
+  components: {},
 };
 </script>
 
