@@ -1,17 +1,25 @@
 <template>
-  <div>
-    <img alt="Vue logo" src="./assets/logo.png" />
+  <div id="app">
+    <div class="menu">
+      <!-- 반복문 쓸 때 :key 안쓰면 에러남 -->
+      <a v-for="a in 메뉴들" :key="a">{{ a }}</a>
+    </div>
+    <!-- for문 이용하기
+    <div v-for="(a, i) in products" :key="i">
+      <h4>{{ a }}</h4>
+      <p>50만원</p>
+    </div> -->
     <div>
       <h4>{{ products[0] }}</h4>
-      <p>50 만원</p>
+      <p>50만원</p>
     </div>
     <div>
       <h4>{{ products[1] }}</h4>
-      <p>가격은 아무거나</p>
+      <p>60만원</p>
     </div>
     <div>
       <h4>{{ products[2] }}</h4>
-      <p>가격은 아무거나</p>
+      <p>70만원</p>
     </div>
   </div>
 </template>
@@ -24,10 +32,7 @@ export default {
     //여기에 데이터 보관, 데이터는 object 자료로 저장
     // {자료이름 : 자료내용}
     return {
-      price1: 60,
-      price2: 70,
-      //HTML 속성도 데이터 바인딩 가능
-      스타일: "color : blue",
+      메뉴들: ["Home", "Shop", "About"],
       products: ["역삼동원룸", "천호동원룸", "마포구원룸"],
     };
   },
@@ -42,6 +47,16 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+.menu {
+  background: darkslateblue;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.menu a {
+  color: white;
+  padding: 10px;
 }
 </style>
